@@ -16,16 +16,16 @@ inputs:
   memorySize: 128 # 内存大小，单位MB
   timeout: 900 # 超时时间，单位秒
   events: # 触发器
-    - timer: #签到
+    - timer: #百度任务
         parameters:
-          name: beansign
-          cronExpression: "0 0 0 * * * *"
+          name: baidu_speed
+          cronExpression: "0 */30 * * * * *"
           enable: true
-          argument: jd_bean_sign
-    - timer: #东东超市兑换奖品 #摇京豆 #京东汽车兑换
+          argument: baidu_speed
+    - timer: #百度提现
         parameters:
-          name: blueCoin_clublottery_carexchange
-          cronExpression: "0 0 0 * * * *"
+          name: baidu_cash
+          cronExpression: "*/2 * 5-7 * * * *"
           enable: true
           argument: jd_blueCoin&jd_club_lottery&jd_car_exchange
     - timer: #东东农场 #东东萌宠 #口袋书店 #京喜农场
